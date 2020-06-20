@@ -1,0 +1,14 @@
+.square {
+  height: 3.9rem;
+  width: 3.9rem;
+  border: 1px solid rgb(186, 186, 189);
+}
+.light-square {
+  background-color: rgb(230, 234, 240);
+}
+.dark-square {
+  background-color: rgb(122, 132, 145);
+}
+.highlighted {
+  background-color: rgba(255, 221, 0, 0.5);
+}

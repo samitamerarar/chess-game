@@ -1,0 +1,24 @@
+<div
+  [ngStyle]="{
+    transform: service.whitePlayerView ? 'rotate(180deg)' : 'rotate(0deg)'
+  }"
+>
+  <div
+    *ngIf="bishop.isWhite == false"
+    class="d-flex flex-column justify-content-center align-items-center"
+  >
+    <img
+      src="../../../assets/Images/freeware/merida/320/BlackBishop.png"
+      style="width: 100%;"
+    />
+  </div>
+  <div
+    *ngIf="bishop.isWhite == true"
+    class="d-flex flex-column justify-content-center align-items-center"
+  >
+    <img
+      src="../../../assets/Images/freeware/merida/320/WhiteBishop.png"
+      style="width: 100%;"
+    />
+  </div>
+</div>

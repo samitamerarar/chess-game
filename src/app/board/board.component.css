@@ -1,0 +1,6 @@
+.board {
+  height: 31.25rem;
+  width: 31.25rem;
+
+  /*transform: rotateX(180deg);*/
+}

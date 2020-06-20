@@ -1,0 +1,36 @@
+<div
+  class="square float-left"
+  [class.light-square]="square.lightSquare"
+  [class.dark-square]="!square.lightSquare"
+  [class.highlighted]="square.highlighted"
+>
+  <div
+    *ngIf="square.piece"
+    (click)="service.clickAPiece(square)"
+    class="style=width: 100%; height: 100%"
+  >
+    <div *ngIf="square.piece.type === 'king'">
+      <king [king]="square.piece"></king>
+    </div>
+    <div *ngIf="square.piece.type === 'queen'">
+      <queen [queen]="square.piece"></queen>
+    </div>
+    <div *ngIf="square.piece.type === 'rook'">
+      <rook [rook]="square.piece"></rook>
+    </div>
+    <div *ngIf="square.piece.type === 'bishop'">
+      <bishop [bishop]="square.piece"></bishop>
+    </div>
+    <div *ngIf="square.piece.type === 'knight'">
+      <knight [knight]="square.piece"></knight>
+    </div>
+    <div *ngIf="square.piece.type === 'pawn'">
+      <pawn [pawn]="square.piece"></pawn>
+    </div>
+  </div>
+  <div
+    *ngIf="!square.piece"
+    style="width: 100%; height: 100%;"
+    (click)="service.moveThePiece(square)"
+  ></div>
+</div>

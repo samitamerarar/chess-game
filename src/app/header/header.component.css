@@ -1,0 +1,32 @@
+.mat-raised-button:focus {
+  outline: none;
+}
+
+.mat-raised-button:hover {
+  background-color: #3849a2;
+}
+
+.btn {
+  font-size: 0.8rem;
+  background-color: #3f8cb5;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #387da2;
+}
+
+.mat-raised-button {
+  margin-top: 1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+p.upcase {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+<app-header></app-header>
+<main>
+  <div
+    class="d-flex flex-md-row flex-column justify-content-center align-items-center app-container"
+  >
+    <div class="m-2">
+      <game-board></game-board>
+    </div>
+  </div>
+
+  <mat-spinner
+    diameter="60"
+    strokeWidth="4"
+    *ngIf="service.loading"
+  ></mat-spinner>
+
+  <!-- Fade out background when the game ends or has not started !-->
+  <div class="dialog" *ngIf="isWinner || service.userDisconnected">
+    <div class="screen-background"></div>
+  </div>
+
+  <!-- Show an alert when the game ends !-->
+  <div
+    class="dialog d-flex justify-content-center align-items-center"
+    *ngIf="isWinner"
+  >
+    <div class="dialog-panel d-flex flex-column align-items-center">
+      <p class="m-4">
+        <b>{{ winner }} Player</b> win!
+      </p>
+      <p class="m-4">
+        <button mat-raised-button color="primary" (click)="onReset()">
+          Close
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Show an alert when a user is disconnected !-->
+  <div
+    class="dialog d-flex justify-content-center align-items-center"
+    *ngIf="service.userDisconnected"
+  >
+    <div class="dialog-panel d-flex flex-column align-items-center">
+      <p class="m-4">
+        A user has been disconnected...
+      </p>
+      <p class="m-4">
+        <button mat-raised-button color="primary" (click)="onReset()">
+          Close
+        </button>
+      </p>
+    </div>
+  </div>
+</main>

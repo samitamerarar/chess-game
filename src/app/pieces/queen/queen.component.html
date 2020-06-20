@@ -1,0 +1,24 @@
+<div
+  [ngStyle]="{
+    transform: service.whitePlayerView ? 'rotate(180deg)' : 'rotate(0deg)'
+  }"
+>
+  <div
+    *ngIf="queen.isWhite == false"
+    class="d-flex flex-column justify-content-center align-items-center"
+  >
+    <img
+      src="../../../assets/Images/freeware/merida/320/BlackQueen.png"
+      style="width: 100%;"
+    />
+  </div>
+  <div
+    *ngIf="queen.isWhite == true"
+    class="d-flex flex-column justify-content-center align-items-center"
+  >
+    <img
+      src="../../../assets/Images/freeware/merida/320/WhiteQueen.png"
+      style="width: 100%;"
+    />
+  </div>
+</div>

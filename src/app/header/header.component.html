@@ -1,0 +1,55 @@
+<mat-toolbar color="primary"
+  >My Chess
+  <span class="spacer"></span>
+  <div>
+    <button
+      mat-raised
+      class="btn"
+      (click)="confirmationDialog()"
+      [hidden]="!clickedJoinGame"
+    >
+      Quit
+    </button>
+  </div>
+</mat-toolbar>
+<div class="d-flex flex-column align-items-center">
+  <button
+    *ngIf="!this.service.gameStarted"
+    mat-raised-button
+    color="primary"
+    (click)="service.joinGame(); clickedJoinGame = true"
+    [disabled]="clickedJoinGame"
+  >
+    Join Game
+  </button>
+
+  <p
+    class="upcase"
+    *ngIf="
+      !this.service.yourTurn &&
+      this.service.whiteTurn &&
+      this.service.gameStarted
+    "
+  >
+    Waiting for
+    <span style="color: #8b0000; font-weight: bold;">White Player</span> to
+    move...
+  </p>
+
+  <p
+    class="upcase"
+    *ngIf="
+      !this.service.yourTurn &&
+      !this.service.whiteTurn &&
+      this.service.gameStarted
+    "
+  >
+    Waiting for
+    <span style="color: #8b0000; font-weight: bold;">Black Player</span> to
+    move...
+  </p>
+
+  <p class="upcase" *ngIf="this.service.yourTurn && this.service.gameStarted">
+    <span style="color: #b22222; font-weight: bold;">Your Turn</span>
+  </p>
+</div>
