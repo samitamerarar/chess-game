@@ -36,7 +36,8 @@ export class GameService {
   private whiteTurnBehSub: BehaviorSubject<boolean>;
 
   constructor() {
-    this.socket = io(this.uri);
+    //this.socket = io(this.uri);
+    this.socket = io();
 
     this.gameUtils = new GameUtils(this);
     this.whiteTurnBehSub = <BehaviorSubject<boolean>>new BehaviorSubject(true);

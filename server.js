@@ -1,7 +1,14 @@
-var app = require("express")();
+var express = require("express");
+var path = require("path");
+var app = express();
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+
+app.use(express.static(path.join(__dirname, "dist/chess-game")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/chess-game/index.html"));
+});
 
 var roomNumber = 0;
 
