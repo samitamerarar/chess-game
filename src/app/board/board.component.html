@@ -1,9 +1,4 @@
-<div
-  class="board"
-  [ngStyle]="{
-    transform: service.whitePlayerView ? 'rotate(180deg)' : 'rotate(0deg)'
-  }"
->
+<div class="board" [ngStyle]="styleObject()">
   <div *ngFor="let row of board">
     <square *ngFor="let square of row" [square]="square"> </square>
   </div>

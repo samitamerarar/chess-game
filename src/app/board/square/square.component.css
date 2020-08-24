@@ -1,8 +1,27 @@
-.square {
-  height: 3.9rem;
-  width: 3.9rem;
-  border: 1px solid rgb(186, 186, 189);
+@media (min-width: 515px) {
+  .square {
+    height: 62.5px;
+    width: 62.5px;
+    border: 1px solid rgb(186, 186, 189);
+  }
 }
+
+@media (min-width: 450px) and (max-width: 514px) {
+  .square {
+    height: 54.4px;
+    width: 54.4px;
+    border: 0.75px solid rgb(186, 186, 189);
+  }
+}
+
+@media (max-width: 449px) {
+  .square {
+    height: 41.4px;
+    width: 41.4px;
+    border: 0.5px solid rgb(186, 186, 189);
+  }
+}
+
 .light-square {
   background-color: rgb(230, 234, 240);
 }

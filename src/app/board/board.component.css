@@ -1,6 +1,20 @@
-.board {
-  height: 31.25rem;
-  width: 31.25rem;
+@media (min-width: 515px) {
+  .board {
+    height: 500px;
+    width: 500px;
+  }
+}
 
-  /*transform: rotateX(180deg);*/
+@media (min-width: 450px) and (max-width: 514px) {
+  .board {
+    height: 436px;
+    width: 436px;
+  }
+}
+
+@media (max-width: 449px) {
+  .board {
+    height: 332px;
+    width: 332px;
+  }
 }

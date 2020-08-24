@@ -31,4 +31,18 @@ export class GameBoardComponent implements OnInit {
     this.service.resetGame();
     this.board = this.service.board;
   }
+
+  styleObject(): Object {
+    let style = {
+      transform: 'rotate(0deg)',
+      opacity: '0.2',
+    };
+    if (this.service.whitePlayerView) {
+      style.transform = 'rotate(180deg)';
+    }
+    if (this.service.gameStarted) {
+      style.opacity = '1';
+    }
+    return style;
+  }
 }

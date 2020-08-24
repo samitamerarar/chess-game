@@ -587,7 +587,7 @@ export class GameUtils {
         if (!this.findSquares(p).up.adversary) {
           if (
             this.findMoreSquare(up, p.type).up.square !== null &&
-            !this.findSquares(p).up.adversary &&
+            !this.findMoreSquare(up, p.type).up.adversary &&
             this.pawnOnFirstRow(this.service.getSquareFromPiece(p))
           )
             up.push(this.findMoreSquare(up, p.type).up.square);
