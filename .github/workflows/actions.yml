@@ -3,7 +3,7 @@ name: Pull from Server
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   pull-on-server:
