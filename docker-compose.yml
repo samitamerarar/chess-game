@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  server:
+    ports:
+      - 5334:8080
+    container_name: simplechessgame
+    networks:
+      - nginxproxymanager_default
+    restart: always
+    build: .
+
+networks:
+  nginxproxymanager_default:
+    external: true

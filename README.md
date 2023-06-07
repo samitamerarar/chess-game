@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Available
 
-https://chess-game-angular.herokuapp.com/
+https://chess-game-angular.samiarar.com/
 
 ## Development server
 
