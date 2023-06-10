@@ -6,6 +6,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://chess-game-angular.samiarar.com/
 
+## Deployment
+
+Pushing on the main branch triggers the automatic deployment on the distant server. Building the app using the below command is _required_ before pushing on the main branch. The resource consuming nature of the building process crashes my server if done directly on it. So I can't make use of Gihub Actions for that.
+
+> npm run heroku-postbuild (after an npm install)
+
+This command generates a dist folder that will be used to render the app. It is called heroku because I used to run this app on Heroku and I don't want to change its name :)
+
+Basically, to run the app :
+
+> npm install && npm run heroku-postbuild && node server.js
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

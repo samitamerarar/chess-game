@@ -10,8 +10,4 @@ RUN npm install
 
 COPY ./ .
 
-RUN npm run heroku-postbuild
-
-COPY ./ .
-
 ENTRYPOINT node server.js
