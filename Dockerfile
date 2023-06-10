@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-buster-slim
 LABEL maintainer="samiarar"
 
 WORKDIR /usr/src/app
@@ -10,4 +10,8 @@ RUN npm install
 
 COPY ./ .
 
-ENTRYPOINT npm clean-install && npm run heroku-postbuild && node server.js
+RUN npm run heroku-postbuild
+
+COPY ./ .
+
+ENTRYPOINT node server.js
