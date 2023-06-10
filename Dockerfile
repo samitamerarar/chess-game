@@ -1,4 +1,4 @@
-FROM node:16-buster-slim
+FROM node:16-alpine
 LABEL maintainer="samiarar"
 
 WORKDIR /usr/src/app
