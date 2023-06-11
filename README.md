@@ -18,6 +18,10 @@ Basically, to run the app :
 
 > npm install && npm run heroku-postbuild && node server.js
 
+### Yarn
+
+While deploying with docker, npm install was taking too much time. I switched to Yarn for the same reasons as the building process issues on the cheap server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
