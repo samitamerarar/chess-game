@@ -1,4 +1,4 @@
-FROM node:12.2.0-alpine
+FROM node:12.17.0-alpine
 LABEL maintainer="samiarar"
 
 WORKDIR /usr/src/app
